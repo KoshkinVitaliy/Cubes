@@ -25,14 +25,11 @@ public class GameInterface {
     }
 
     private void getPlayerChoice() {
-        boolean choice;
-        String answer = getScannerData("Сумма кубиков с компьютером больше 12? да/нет");
+        String answer = getScannerData("Сумма кубиков с компьютером больше 15? да/нет");
         if (answer.equals("да")) {
-            choice = true;
-            checkTurnResult(choice);
+            checkTurnResult(true);
         } else if (answer.equals("нет")) {
-            choice = false;
-            checkTurnResult(choice);
+            checkTurnResult(false);
         } else {
             System.out.println("Неккоректный ответ. попробуйте ещё раз.");
             getPlayerChoice();
